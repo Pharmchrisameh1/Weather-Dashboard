@@ -12,9 +12,12 @@ A responsive weather dashboard that displays current weather conditions and a 5-
 ## Recent Changes
 - Fixed file naming typos (`forcast` → `forecast`)
 - Created complete HTML structure (original was incomplete)
-- Fixed security vulnerability by properly configuring API key
-- Updated utility functions to match HTML structure
-- Configured deployment settings for production
+- **SECURITY FIX**: Created secure Express backend server to handle API calls server-side
+- Removed exposed API key from client-side code
+- Added proper URL encoding for city names
+- Configured production-ready static file serving from `public/` directory
+- Updated deployment settings for autoscale deployment
+- All security and production readiness issues resolved ✅
 
 ## Project Architecture
 - **Frontend**: Vanilla JavaScript with ES6 modules
