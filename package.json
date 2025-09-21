@@ -4,6 +4,8 @@
   "description": "A responsive weather dashboard application",
   "main": "index.html",
   "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx live-server --port=8000",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -11,7 +13,8 @@
   "devDependencies": {
     "jest": "^29.0.0",
     "@testing-library/jest-dom": "^5.16.0",
-    "jsdom": "^22.0.0"
+    "jsdom": "^22.0.0",
+    "http-server": "^14.1.1"
   },
   "jest": {
     "testEnvironment": "jsdom",
