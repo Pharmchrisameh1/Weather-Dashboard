@@ -1,33 +1,39 @@
 // Show loading state
 export function showLoading() {
-    // Add loading indicator
-    document.body.classList.add('loading');
+    const loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+        loadingElement.classList.remove('hidden');
+    }
 }
 
 // Hide loading state
 export function hideLoading() {
-    // Remove loading indicator
-    document.body.classList.remove('loading');
+    const loadingElement = document.getElementById('loading');
+    if (loadingElement) {
+        loadingElement.classList.add('hidden');
+    }
 }
 
 // Show error message
 export function showError(message) {
-    const errorElement = document.createElement('div');
-    errorElement.className = 'error-message';
-    errorElement.textContent = message;
+    const errorElement = document.getElementById('error');
+    const errorMessage = document.getElementById('error-message');
     
-    document.querySelector('.container').prepend(errorElement);
+    if (errorElement && errorMessage) {
+        errorMessage.textContent = message;
+        errorElement.classList.remove('hidden');
+    }
     
-    // Remove error after 3 seconds
+    // Remove error after 5 seconds
     setTimeout(() => {
         clearError();
-    }, 3000);
+    }, 5000);
 }
 
 // Clear error message
 export function clearError() {
-    const errorElement = document.querySelector('.error-message');
+    const errorElement = document.getElementById('error');
     if (errorElement) {
-        errorElement.remove();
+        errorElement.classList.add('hidden');
     }
 }
