@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="components/current-weather/current-weather.css">
+    <link rel="stylesheet" href="components/forecast/forecast.css">
+    <link rel="stylesheet" href="components/search/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Weather Dashboard</h1>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Enter city name..." />
+                <button id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="error-message"></p>
+        </div>
+
+        <!-- Current Weather Section -->
+        <section class="current-weather">
+            <div class="weather-main">
+                <div class="location-date">
+                    <h2 id="city-name">London, GB</h2>
+                    <p id="current-date"></p>
+                </div>
+                <div class="temperature-info">
+                    <div class="temp-display">
+                        <span id="temperature">20°C</span>
+                        <img id="weather-icon" src="" alt="Weather icon" />
+                    </div>
+                    <p id="feels-like">Feels like: 22°C</p>
+                    <p id="weather-description">Clear sky</p>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <span class="detail-label">Wind</span>
+                    <span id="wind-speed">3.5 m/s</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity">65%</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-gauge"></i>
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure">1013 hPa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast Section -->
+        <section class="forecast-section">
+            <h3>5-Day Forecast</h3>
+            <div id="forecast-container" class="forecast-container">
+                <!-- Forecast items will be populated by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
