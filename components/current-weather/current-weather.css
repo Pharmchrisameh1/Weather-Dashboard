@@ -1,0 +1,83 @@
+/* Current Weather Component Styles */
+.current-weather {
+    height: 100%;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.location h2 {
+    font-size: 24px;
+    color: #1e3c72;
+}
+
+.location p {
+    color: #666;
+    font-size: 14px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temperature h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+.temperature p {
+    color: #666;
+    font-size: 14px;
+}
+
+.weather-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.weather-icon p {
+    text-transform: capitalize;
+    margin-top: 5px;
+    color: #666;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(30, 60, 114, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.detail i {
+    font-size: 20px;
+    color: #1e3c72;
+    margin-bottom: 5px;
+}
+
+.detail p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}

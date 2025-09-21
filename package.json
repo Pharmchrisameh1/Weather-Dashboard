@@ -1,0 +1,28 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "A responsive weather dashboard that displays current weather conditions and a 5-day forecast",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start": "http-server -p 8000"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "forecast",
+    "openweathermap"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.0.6",
+    "http-server": "^14.0.0",
+    "jest": "^27.0.6",
+    "jest-environment-jsdom": "^27.0.6"
+  }
+}
